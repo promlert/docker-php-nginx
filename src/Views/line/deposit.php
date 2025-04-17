@@ -50,7 +50,7 @@
             <div class="col-12 mb-2">
                  <div class="form-group">
                     <label for="slip">Slip Bank<span class="required-field"></span></label>
-                    <input type="file" class="form-control" id="slip">
+                    <input type="file" class="form-control" id="slip" accept="image/png, image/gif, image/jpeg">
                     <small id="slip-validate" class="form-text text-danger "></small>
                 </div>
             </div>
@@ -155,7 +155,7 @@
             }
             formdata.append("userProfile", userProfile);
             $.ajax({
-                url: "https://backend-api-chat.aslsecurities.com/lineconnect/apply/uploadSlip",
+                url: "./upload.php",
                 type: "POST",
                 data:  new FormData(this),
                 contentType: false,
