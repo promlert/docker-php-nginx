@@ -85,14 +85,15 @@
                 const statusMessage = profile.statusMessage;
                 const pictureUrl = profile.pictureUrl;
                 const urls = new URLSearchParams(window.location.search);
-            
+                console.log(profile.displayName);
                 document.getElementById('port-detail').value='';
             
                 document.getElementById('port-validate').innerHTML="";
 
                 document.getElementById('port').classList.remove("is-invalid");
                 if(userProfile != ""){
-
+                    document.getElementById('frm-register').style.display='';
+                    document.getElementById('frm-detail').style.display='none';
                 }
                 // if(userProfile != ""){
                 //     $.post("https://backend-api-chat.aslsecurities.com/lineconnect/apply/check/seminar/register",{userProfile: userProfile, seminar_id:urls.get('param')},
@@ -180,10 +181,12 @@
                     if(data=='invalid')
                     {
                         // show error message.
-                        $("#err").html("Invalid File !").fadeIn();
+                        //$("#err").html("Invalid File !").fadeIn();
+                        alert("Invalid File !");
                     }
                     else
                     {
+                        console.info(data);  
                         // view uploaded file.
                         $("#port").val('');
                         $("#slip").val('');
