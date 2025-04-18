@@ -147,12 +147,35 @@
         if(validate)
         {
             $("#loading").show();
-            var formdata = new FormData();
-            if($(this).prop('files').length > 0)
-            {
-                file =$(this).prop('files')[0];
-                formdata.append("slip", file);
+            const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+            const files = fileInput?.files;
+            if (!files || files.length === 0) {
+                alert("กรุณาแนบไฟล์รูป.");
+                $("#loading").hide();
             }
+            if (files && files.length > 0) {
+                const file = files[0];
+                const fileSize = file.size / 1024 / 1024; // Convert to MB
+                if (fileSize > 2) {
+                    alert("File size exceeds 2MB. Please upload a smaller file.");
+                    $("#loading").hide();
+                    return;
+                }
+            }
+
+            var formdata = new FormData();
+
+
+            // if($(this).prop('files').length > 0)
+            // {
+            //     file =$(this).prop('files')[0];
+            //     formdata.append("slip", file);
+            // }
+            for (const file of Array.from(files)) {
+                const formData = new FormData();
+                formData.append('file', file);
+            }
+
             formdata.append("userProfile", userProfile);
             $.ajax({
                 url: "./upload.php",
