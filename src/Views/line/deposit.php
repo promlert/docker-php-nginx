@@ -41,7 +41,7 @@
 
         <div class="row" style="display:none;" id="frm-register">
             <div class="col-12 mb-2 mt-5 text-center">
-                 <h3>แนปสลิป</h3>
+                 <h3>แนปสําเนาการโอนหรือฝากเงิน</h3>
             </div>
             <div class="col-12 mb-2">
                  <div class="form-group">
@@ -52,7 +52,7 @@
             </div>
             <div class="col-12 mb-2">
                  <div class="form-group">
-                    <label for="slip">สําเนาการโอนหรือฝากเงินประเภทไฟล์ .jpg .png .pdf ขนาดไม่เกิน 10 MB<span class="required-field"></span></label>
+                    <label for="slip">ประเภทไฟล์ .jpg .png .pdf ขนาดไม่เกิน 10 MB<span class="required-field"></span></label>
                     <input type="file" class="form-control" id="slip" accept="image/png, image/jpeg">
                     <small id="slip-validate" class="form-text text-danger "></small>
                 </div>
