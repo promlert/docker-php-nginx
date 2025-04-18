@@ -176,7 +176,7 @@
                 formData.append('file', file);
             }
 
-            formdata.append("userProfile", userProfile);
+            formData.append("userProfile", userProfile);
             $.ajax({
                 url: "./upload.php",
                 type: "POST",
