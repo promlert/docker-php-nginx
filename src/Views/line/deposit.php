@@ -52,8 +52,8 @@
             </div>
             <div class="col-12 mb-2">
                  <div class="form-group">
-                    <label for="slip">Slip Bank<span class="required-field"></span></label>
-                    <input type="file" class="form-control" id="slip" accept="image/png, image/gif, image/jpeg">
+                    <label for="slip">สําเนาการโอนหรือฝากเงินประเภทไฟล์ .jpg .png .pdf ขนาดไม่เกิน 10 MB<span class="required-field"></span></label>
+                    <input type="file" class="form-control" id="slip" accept="image/png, image/jpeg">
                     <small id="slip-validate" class="form-text text-danger "></small>
                 </div>
             </div>
@@ -65,7 +65,7 @@
 
         <div class="row" style="display:none;" id="frm-detail">
             <div class="col-12 mb-2 mt-5 text-center">
-                <h3>ท่านได้แนปสลิปเรียบร้อยแล้ว</h3>
+                <h3>ท่านได้สําเนาการโอนหรือฝากเงินเรียบร้อยแล้ว</h3>
             </div>
         </div>
     </div>
