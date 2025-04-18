@@ -170,7 +170,6 @@
             // }
             const formData = new FormData();
             for (const file of Array.from(files)) {
-               
                 formData.append('file', file);
             }
 
