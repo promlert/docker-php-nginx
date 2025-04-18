@@ -30,6 +30,9 @@
             content: "*";
             color: red;
             }
+            .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                background-color: whitesmoke;
+            }
         </style>
     </head>
     <body id="page-top">
