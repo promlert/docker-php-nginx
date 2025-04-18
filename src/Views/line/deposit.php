@@ -147,7 +147,7 @@
         if(validate)
         {
             $("#loading").show();
-            const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+            const fileInput = document.querySelector('input[type="file"]');
             const files = fileInput?.files;
             if (!files || files.length === 0) {
                 alert("กรุณาแนบไฟล์รูป.");
