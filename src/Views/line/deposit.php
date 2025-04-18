@@ -84,7 +84,7 @@
         var userProfile = "";
         $("#loading").show();
         document.addEventListener("DOMContentLoaded", function() {
-            liff.init({ liffId: '2005593789-x51eY5L0', withLoginOnExternalBrowser:true }).then(() => {
+            liff.init({ liffId: '2007230457-jPVJnZwg', withLoginOnExternalBrowser:true }).then(() => {
                 liff.getProfile().then(profile => {
                 userProfile = profile.userId;
                 const displayName = profile.displayName;
