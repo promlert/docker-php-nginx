@@ -6,7 +6,7 @@ if(isset($_FILES['file']['name'])){
 	$filename = $_FILES['file']['name'];
 
 	/* Location */
-	$location = "upload/".$filename;
+	$location = "/var/www/html/upload/".$filename;
 	$imageFileType = pathinfo($location,PATHINFO_EXTENSION);
 	$imageFileType = strtolower($imageFileType);
 
