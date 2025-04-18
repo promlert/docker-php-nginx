@@ -163,16 +163,14 @@
                 }
             }
 
-            var formdata = new FormData();
-
-
             // if($(this).prop('files').length > 0)
             // {
             //     file =$(this).prop('files')[0];
             //     formdata.append("slip", file);
             // }
+            const formData = new FormData();
             for (const file of Array.from(files)) {
-                const formData = new FormData();
+               
                 formData.append('file', file);
             }
 
@@ -180,7 +178,7 @@
             $.ajax({
                 url: "./upload.php",
                 type: "POST",
-                data:  new FormData(this),
+                data:  formData,
                 contentType: false,
                 cache: false,
                 processData:false,
