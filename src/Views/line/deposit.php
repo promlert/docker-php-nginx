@@ -185,8 +185,10 @@
                     else
                     {
                         // view uploaded file.
-                        $("#preview").html(data).fadeIn();
-                        $("#form")[0].reset(); 
+                        $("#port").val('');
+                        $("#slip").val('');
+                        $("#slip-validate").html("");
+                        $("#slip").removeClass("is-invalid");
                     }
                     $("#loading").hide();
                     document.getElementById('frm-register').style.display='none';
