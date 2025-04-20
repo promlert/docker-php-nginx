@@ -77,7 +77,7 @@
     <script>
         var userProfile = "";
         $("#loading").show();
-        document.addEventListener("DOMContentLoaded", function() {
+         document.addEventListener("DOMContentLoaded", function() {
             liff.init({ liffId: '2007230457-jPVJnZwg', withLoginOnExternalBrowser:true }).then(() => {
                 liff.getProfile().then(profile => {
                 userProfile = profile.userId;
@@ -95,25 +95,6 @@
                     document.getElementById('frm-register').style.display='';
                     document.getElementById('frm-detail').style.display='none';
                 }
-                // if(userProfile != ""){
-                //     $.post("https://backend-api-chat.aslsecurities.com/lineconnect/apply/check/seminar/register",{userProfile: userProfile, seminar_id:urls.get('param')},
-                //     function(data, status){
-                //         if(data.data){
-                //             document.getElementById('frm-register').style.display='none';
-                //             document.getElementById('frm-detail').style.display='';
-                //         }else{
-                //             document.getElementById('frm-register').style.display='';
-                //             document.getElementById('frm-detail').style.display='none';
-                //         }
-                        
-                //         $("#loading").hide();
-                //     });
-                // }else{
-                //     document.getElementById('frm-register').style.display='';
-                //     document.getElementById('frm-detail').style.display='none';
-                //     $("#loading").hide();
-                // }
-              
             }).catch((error) => {
                 document.getElementById('frm-register').style.display='';
                 document.getElementById('frm-detail').style.display='none';
@@ -125,7 +106,7 @@
             document.getElementById('frm-detail').style.display='none';
             $("#loading").hide();
         })
-    });
+     });
 
 
     function submitData(){
@@ -168,7 +149,8 @@
                 formData.append('file', file);
             }
 
-            formData.append("userProfile", userProfile);
+            //formData.append("userProfile", userProfile);
+            formData.append("port", $("#port").val());
             $.ajax({
                 url: "./upload.php",
                 type: "POST",
